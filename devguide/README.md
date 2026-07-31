@@ -8,28 +8,16 @@
 
 `molsys-ai-client` is the typed transport SDK for remote MolSys-AI services.
 
-It should provide:
+It provides endpoint configuration, authentication handling, typed models, streaming, retries, timeouts, compatibility negotiation and clear transport errors.
 
-- endpoint configuration,
-- authentication handling,
-- typed request and response models,
-- streaming support,
-- retries, timeouts and clear transport errors,
-- compatibility negotiation with server APIs.
-
-It must not contain:
-
-- the scientific agent,
-- MolSysSuite execution logic,
-- molecular session state,
-- viewer control,
-- planning or tool orchestration.
-
-Those responsibilities belong to `molsys-ai`.
+It must not contain the scientific agent, MolSysSuite execution logic, molecular session state, viewer control, planning or tool orchestration. Those responsibilities belong to `molsys-ai`.
 
 ## Documents
 
-- [ARCHITECTURE.md](ARCHITECTURE.md): package boundaries and profile model.
+- [ARCHITECTURE.md](ARCHITECTURE.md): package boundary and candidate profile model.
+- [PUBLIC_API.md](PUBLIC_API.md): minimal synchronous, asynchronous and streaming SDK surface.
+- [CONFIGURATION.md](CONFIGURATION.md): precedence, named profiles and secure credential resolution.
+- [COMPATIBILITY.md](COMPATIBILITY.md): schema ownership and client-server version negotiation.
 - [ROADMAP.md](ROADMAP.md): minimal implementation path.
 
 ## Strategic note
